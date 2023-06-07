@@ -64,7 +64,7 @@ const Layout = () => {
   return (
     <div className="w-full relative">
       {showHeader && (
-        <header className="h-32 w-full px-32 flex justify-between items-center ">
+        <header className="h-32 w-full px-32 flex justify-between items-center bg-red-50 bg-opacity-70 py-2">
           <Link to="/" className="h-full">
             <img src={logo} alt="Logo" className="h-full" />
           </Link>
