@@ -7,7 +7,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen absolute inset-0 flex justify-between gap-3 z-50">
+    <div className="h-screen absolute inset-0 flex justify-between gap-3 z-50 p-2">
       <figure className="w-[45%] h-full relative">
         <img
           src={spiritedaway_figure}
