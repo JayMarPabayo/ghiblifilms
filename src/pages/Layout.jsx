@@ -15,6 +15,14 @@ import myneighbortotoro_poster from "../assets/films/my-neighbor-totoro/poster.j
 import castleinthesky_figure from "../assets/films/castle-in-the-sky/figure.jpg";
 import castleinthesky_poster from "../assets/films/castle-in-the-sky/poster.jpg";
 
+// -- Princess Mononoke
+import princessmononoke_figure from "../assets/films/princess-mononoke/figure.jpg";
+import princessmononoke_poster from "../assets/films/princess-mononoke/poster.jpg";
+
+// -- Howl's Moving Castle
+import howlsmovingcastle_figure from "../assets/films/howls-moving-castle/figure.jpg";
+import howlsmovingcastle_poster from "../assets/films/howls-moving-castle/poster.jpg";
+
 export const FilmsContext = createContext({});
 
 const Layout = () => {
@@ -76,6 +84,39 @@ const Layout = () => {
         fetch: `https://www.fetchtv.com.au/movie/details/2168888`,
       },
     },
+    {
+      title: "Princess Mononoke",
+      kanji: "もののけ姫",
+      year: "1997",
+      director: "Hayao Miyazaki",
+      runtime: "134 mins",
+      figure: princessmononoke_figure,
+      poster: princessmononoke_poster,
+      header: `A beautifully realized tale of civilization versus nature, PRINCESS MONONOKE is a true epic by Japan's master animator Hayao Miyazaki.`,
+      body: `While protecting his village from a rampaging boar-god, the young warrior Ashitaka becomes afflicted with a deadly curse. To find the cure that will save his life, he journeys deep into sacred depths of the Great Forest Spirit's realm where he meets San (Princess Mononoke), a girl raised by wolves. It's not long before Ashitaka is caught in the middle of a battle between iron-ore prospecting humans and the forest dwellers. He must summon the spirit-powers and all his courage to stop man and nature from destroying each other.`,
+      digitalStore: {
+        iTunes: `https://itunes.apple.com/us/movie/princess-mononoke/id1521781634?ls=1`,
+        googlePlay: `https://play.google.com/store/movies/details/Princess_Mononoke?id=vOIAICoI8us.P`,
+        ms: `https://www.microsoft.com/en-au/p/princess-mononoke-english-version/8d6kgwxn7dhr?activetab=pivot%3aoverviewtab`,
+        amazon: `https://www.primevideo.com/detail/0GUU14NOLILXPUUZMCP09TL3BK/ref=atv_sr_def_c_unkc__1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B08GBRQC2J&qid=1603950235`,
+        fetch: `https://www.fetchtv.com.au/movie/details/2179281`,
+      },
+    },
+    {
+      title: "Howl's Moving Castle",
+      kanji: "ハウルの動く城",
+      year: "2004",
+      director: "Hayao Miyazaki",
+      runtime: "114 mins",
+      figure: howlsmovingcastle_figure,
+      poster: howlsmovingcastle_poster,
+      header: `From HAYAO MIYAZAKI, the creator of the Academy Award winning SPIRITED AWAY.`,
+      body: `Sophie, an average teenage girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl. After this chance meeting she is turned into a 90-year old woman by the vain and conniving Witch of the Waste. Embarking on an incredible adventure to lift the curse, she finds refuge in Howl's magical moving castle where she becomes acquainted with Markl, Howl's apprentice, and a hot-headed fire demon named Calcifer.
+      As the true power of Howl's wizardry is revealed, and his relationship with Sophie deepens, our young grey heroine finds herself fighting to protect them both from a dangerous war of sorcery that threatens their world.`,
+      digitalStore: {
+        iTunes: `https://itunes.apple.com/us/movie/howls-moving-castle/id1523005877?ls=1`,
+      },
+    },
   ];
 
   const location = useLocation();
@@ -85,10 +126,10 @@ const Layout = () => {
     <div className="w-full relative">
       {showHeader && (
         <header className="h-32 w-full px-32 flex justify-between items-center bg-red-50 bg-opacity-70 py-2">
-          <Link to="/" className="h-full">
+          <Link to="/" className="h-full w-64">
             <img src={logo} alt="Logo" className="h-full" />
           </Link>
-          <div className="h-full w-[800px] bg-[#756840] text-center text-white pt-2 px-2">
+          <div className="h-full flex-1 bg-[#756840] text-center text-white pt-2 px-2">
             <h1 className="font-semibold text-base">
               Celebrating 25 years of Princess Mononoke
             </h1>

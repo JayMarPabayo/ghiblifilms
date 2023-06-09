@@ -47,7 +47,7 @@ const Film = () => {
                 <img
                   src={poster}
                   alt={`${title} Poster`}
-                  className="opacity-80 h-full w-full object-cover"
+                  className="opacity-80 h-full w-full object-contain"
                 />
               </figure>
               <article className="w-full h-full text-center pt-2 text-white">
@@ -106,86 +106,96 @@ const Film = () => {
               </Link>
               <section className="w-[63rem]  h-48 flex-col">
                 <ul className="w-full h-1/2 flex gap-2 justify-center items-center border-t border-white border-opacity-20 mt-2">
-                  <li>
-                    <Link
-                      to={digitalStore.iTunes}
-                      target="_blank"
-                      className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
-                    >
-                      <img
-                        src={itunes}
-                        alt={`${title} iTunes Link`}
-                        className="h-3/4 object-cover object-center"
-                      />
-                      <span className="font-bold flex-1 text-center">
-                        iTunes Store
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={digitalStore.googlePlay}
-                      target="_blank"
-                      className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
-                    >
-                      <img
-                        src={googleplay}
-                        alt={`${title} Google Play Link`}
-                        className="h-3/4 object-cover object-center"
-                      />
-                      <span className="font-bold flex-1 text-center">
-                        Google Play
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={digitalStore.ms}
-                      target="_blank"
-                      className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
-                    >
-                      <img
-                        src={ms}
-                        alt={`${title} Microsoft Movies & TV Link`}
-                        className="h-3/4 object-cover object-center"
-                      />
-                      <span className="font-bold flex-1 text-center text-xs">
-                        Microsoft Movies & TV
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={digitalStore.amazon}
-                      target="_blank"
-                      className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
-                    >
-                      <img
-                        src={amazon}
-                        alt={`${title} Amazon Link`}
-                        className="h-3/4 object-cover object-center"
-                      />
-                      <span className="font-bold flex-1 text-center">
-                        Amazon
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to={digitalStore.fetch}
-                      target="_blank"
-                      className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
-                    >
-                      <img
-                        src={fetch}
-                        alt={`${title} Fetch TV Link`}
-                        className="h-3/4  object-cover object-center"
-                      />
-                      <span className="font-bold flex-1 text-center text-xs">
-                        Fetch TV
-                      </span>
-                    </Link>
-                  </li>
+                  {digitalStore.iTunes && (
+                    <li>
+                      <Link
+                        to={digitalStore.iTunes}
+                        target="_blank"
+                        className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
+                      >
+                        <img
+                          src={itunes}
+                          alt={`${title} iTunes Link`}
+                          className="h-3/4 object-cover object-center"
+                        />
+                        <span className="font-bold flex-1 text-center">
+                          iTunes Store
+                        </span>
+                      </Link>
+                    </li>
+                  )}
+                  {digitalStore.googlePlay && (
+                    <li>
+                      <Link
+                        to={digitalStore.googlePlay}
+                        target="_blank"
+                        className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
+                      >
+                        <img
+                          src={googleplay}
+                          alt={`${title} Google Play Link`}
+                          className="h-3/4 object-cover object-center"
+                        />
+                        <span className="font-bold flex-1 text-center">
+                          Google Play
+                        </span>
+                      </Link>
+                    </li>
+                  )}
+                  {digitalStore.ms && (
+                    <li>
+                      <Link
+                        to={digitalStore.ms}
+                        target="_blank"
+                        className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
+                      >
+                        <img
+                          src={ms}
+                          alt={`${title} Microsoft Movies & TV Link`}
+                          className="h-3/4 object-cover object-center"
+                        />
+                        <span className="font-bold flex-1 text-center text-xs">
+                          Microsoft Movies & TV
+                        </span>
+                      </Link>
+                    </li>
+                  )}
+                  {digitalStore.amazon && (
+                    <li>
+                      <Link
+                        to={digitalStore.amazon}
+                        target="_blank"
+                        className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
+                      >
+                        <img
+                          src={amazon}
+                          alt={`${title} Amazon Link`}
+                          className="h-3/4 object-cover object-center"
+                        />
+                        <span className="font-bold flex-1 text-center">
+                          Amazon
+                        </span>
+                      </Link>
+                    </li>
+                  )}
+                  {digitalStore.fetch && (
+                    <li>
+                      <Link
+                        to={digitalStore.fetch}
+                        target="_blank"
+                        className="h-12 w-40 bg-red-50 bg-opacity-60 hover:bg-opacity-80 hover:scale-95 rounded-md p-1 flex justify-between gap-1 items-center transition-all duration-300"
+                      >
+                        <img
+                          src={fetch}
+                          alt={`${title} Fetch TV Link`}
+                          className="h-3/4  object-cover object-center"
+                        />
+                        <span className="font-bold flex-1 text-center text-xs">
+                          Fetch TV
+                        </span>
+                      </Link>
+                    </li>
+                  )}
                 </ul>
                 <div className="w-full h-1/2 text-center text-white text-sm">
                   <h1 className="text-base text-red-50 font-bold tracking-wide">{`${title} on Digital`}</h1>
