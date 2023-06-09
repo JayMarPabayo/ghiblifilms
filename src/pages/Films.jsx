@@ -5,15 +5,15 @@ import { FilmsContext } from "./Layout";
 const Films = () => {
   const films = useContext(FilmsContext);
   return (
-    <div className="w-full px-32 mt-10">
-      <main className="grid grid-cols-6 gap-x-4 justify-start content-center">
+    <div className="w-full px-2 md:px-32 mt-2 md:mt-10">
+      <main className="grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-4 justify-start content-center">
         {films &&
           films.map((film, index) => (
             <Link
               to={film.title?.toLowerCase().replace(/\s+/g, "-")}
               key={index}
               title={film.title}
-              className="h-72 w-full overflow-hidden relative"
+              className="h-44 md:h-72 w-full overflow-hidden relative"
             >
               <img
                 src={film.poster}

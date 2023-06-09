@@ -123,13 +123,13 @@ const Layout = () => {
   const showHeader = location.pathname !== "/";
 
   return (
-    <div className="w-full relative">
+    <div className="w-full h-auto relative overflow-auto md:overflow-hidden">
       {showHeader && (
-        <header className="h-32 w-full px-32 flex justify-between items-center bg-red-50 bg-opacity-70 py-2">
-          <Link to="/" className="h-full w-64">
+        <header className="h-auto md:h-32 w-full md:px-32 flex flex-col md:flex-row justify-between items-center bg-red-50 bg-opacity-70 py-2">
+          <Link to="/" className="h-full w-48 md:w-64 py-2 md:py-0">
             <img src={logo} alt="Logo" className="h-full" />
           </Link>
-          <div className="h-full flex-1 bg-[#756840] text-center text-white pt-2 px-2">
+          <div className="h-full flex-1 bg-[#756840] text-center text-white pt-2 px-2 pb-2 md:pb-0">
             <h1 className="font-semibold text-base">
               Celebrating 25 years of Princess Mononoke
             </h1>

@@ -35,14 +35,14 @@ const Film = () => {
   } = film;
   return (
     <div className="w-full h-full text-black relative">
-      <div className="w-full max-h-96 relative bg-red-300">
+      <div className="w-full h-auto relative bg-red-300">
         <img
           src={figure}
           className="fixed inset-0 -z-20 h-full w-full object-cover object-bottom"
         />
         <div className="fixed inset-0 bg-black bg-opacity-80 -z-10">
-          <main className="h-full flex flex-col bg-red-50 bg-opacity-10 mt-32 px-32 pt-2">
-            <div className="h-96 w-full flex gap-2">
+          <main className="h-full flex flex-col bg-red-50 bg-opacity-10 mt-80 md:mt-32 md:px-32 pt-4 ">
+            <div className="h-auto md:h-96 w-full flex flex-row justify-between gap-2">
               <figure className="w-80 h-full">
                 <img
                   src={poster}
@@ -51,18 +51,22 @@ const Film = () => {
                 />
               </figure>
               <article className="w-full h-full text-center pt-2 text-white">
-                <section className="flex h-full flex-col justify-start gap-5">
+                <section className="flex h-full flex-col justify-start gap-2 md:gap-5">
                   <section>
-                    <h1 className="text-3xl font-semibold tracking-wider">
+                    <h1 className="text-base md:text-3xl font-semibold tracking-wider">
                       {title}
                     </h1>
-                    <h2 className="text-base font-bold tracking-wider opacity-90 mt-2 text-[#aca07e]">
+                    <h2 className="text-sm md:text-base font-bold tracking-wider opacity-90 mt-2 text-[#aca07e]">
                       {kanji}
                     </h2>
                   </section>
-                  <h1 className="text-2xl font-medium mt-5">{header}</h1>
-                  <p className="text-base opacity-90 my-auto flex-1">{body}</p>
-                  <ul className="text-base opacity-90 flex justify-center items-center gap-4">
+                  <h1 className="text-base md:text-2xl font-medium mt-5">
+                    {header}
+                  </h1>
+                  <p className="text-[0.7rem] md:text-base opacity-90 my-auto flex-1">
+                    {body}
+                  </p>
+                  <ul className="text-[0.65rem] md:text-base opacity-90 flex justify-center items-center gap-1 md:gap-4">
                     <li className="flex items-center gap-1">
                       <GiFilmSpool /> {director}
                     </li>

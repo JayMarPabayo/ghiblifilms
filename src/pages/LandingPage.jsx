@@ -7,8 +7,8 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen absolute inset-0 flex justify-between gap-3 z-50 p-2">
-      <figure className="w-[45%] h-full relative">
+    <div className="h-full md:h-screen absolute inset-0 flex flex-col md:flex-row justify-start md:justify-between gap-3 z-50 p-2">
+      <figure className="w-full md:w-[45%] h-40 md:h-full relative">
         <img
           src={spiritedaway_figure}
           alt="Spirited Away"
@@ -19,11 +19,11 @@ const LandingPage = () => {
           <h2 className="text-xs"> 千と千尋の神隠し</h2>
         </div>
       </figure>
-      <article className="w-[55%] h-full flex flex-col justify-center items-center gap-10">
-        <h1 className="font-great-vibes text-center tracking-widest text-6xl font-semibold">
+      <article className="w-full md:w-[55%] h-full flex flex-col justify-start md:justify-center items-center gap-3 md:gap-10">
+        <h1 className="font-great-vibes text-center tracking-widest text-2xl md:text-6xl font-semibold">
           Spirited Away
         </h1>
-        <p className="px-2 text-center">
+        <p className="px-2 text-center text-xs md:text-base">
           In the enchanting world of "Spirited Away," we embark on a mesmerizing
           journey alongside a young girl named Chihiro. When her family stumbles
           upon a mysterious abandoned amusement park, Chihiro discovers a hidden
